@@ -37,10 +37,10 @@ const Navbar = () => {
 
         {/* Desktop Buttons */}
         <div className="hidden lg:flex space-x-4">
-          <button className="bg-yellow-300 px-4 py-2 rounded-3xl hover:bg-yellow-400">
+          <button className="bg-yellow-300 cursor-pointer px-4 py-2 rounded-3xl hover:bg-yellow-400">
             Hire Talent
           </button>
-          <button className="bg-black text-white px-4 py-2 rounded-3xl hover:bg-gray-900">
+          <button className="bg-black cursor-pointer text-white px-4 py-2 rounded-3xl hover:bg-gray-900">
             Find a Job
           </button>
         </div>

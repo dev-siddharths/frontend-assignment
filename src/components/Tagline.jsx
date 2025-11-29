@@ -59,10 +59,10 @@ const Tagline = () => {
           </div>
 
           {/* Buttons */}
-          <button className="w-full sm:w-auto px-4 py-2 rounded-full bg-yellow-400 text-sm font-semibold">
+          <button className="w-full cursor-pointer sm:w-auto px-4 py-2 rounded-full bg-yellow-400 text-sm font-semibold">
             Find a Job
           </button>
-          <button className="w-full sm:w-auto px-4 py-2 rounded-full bg-black text-white text-sm font-semibold">
+          <button className="w-full cursor-pointer sm:w-auto px-4 py-2 rounded-full bg-black text-white text-sm font-semibold">
             Drop Resume
           </button>
         </div>

@@ -82,7 +82,7 @@ const EasySteps = () => {
 
               {/* Button */}
               <div className="flex justify-center md:justify-start items-center">
-                <button className="px-4 py-2 min-w-[86px] border border-gray-700 rounded-2xl text-sm">
+                <button className="px-4 cursor-pointer py-2 min-w-[86px] border border-gray-700 rounded-2xl text-sm">
                   {step.btn}
                 </button>
               </div>

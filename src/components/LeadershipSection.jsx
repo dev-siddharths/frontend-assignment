@@ -35,7 +35,7 @@ const LeadershipSection = () => {
 
       <div className="max-w-7xl mx-auto flex items-center gap-6">
         {/* Left Arrow */}
-        <button className="p-3 rounded-full bg-gray-100 shadow hidden md:flex">
+        <button className="p-3 rounded-full cursor-pointer bg-gray-100 shadow hidden md:flex">
           <span className="text-xl">‹</span>
         </button>
 
@@ -63,7 +63,7 @@ const LeadershipSection = () => {
                     <p className="text-sm text-gray-600">{person.role}</p>
                   </div>
 
-                  <button className="bg-[#FFDA30] text-black px-3 py-1 text-sm rounded-md shadow">
+                  <button className="bg-[#FFDA30] cursor-pointer text-black px-3 py-1 text-sm rounded-md shadow">
                     Read more
                   </button>
                 </div>
@@ -77,7 +77,7 @@ const LeadershipSection = () => {
         </div>
 
         {/* Right Arrow */}
-        <button className="p-3 rounded-full bg-gray-100 shadow hidden md:flex">
+        <button className="p-3 cursor-pointer rounded-full bg-gray-100 shadow hidden md:flex">
           <span className="text-xl">›</span>
         </button>
       </div>

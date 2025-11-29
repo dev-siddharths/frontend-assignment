@@ -23,7 +23,7 @@ const Browse = () => {
           <Card image={sa} title="Solutions Architect" color="white"></Card>
         </div>
         <div className="flex justify-center items-center">
-          <button className="px-6 py-2 rounded-full bg-yellow-400 text-lg font-semibold">
+          <button className="px-6 py-2 cursor-pointer rounded-full bg-yellow-400 text-lg font-semibold">
             Browse More
           </button>
         </div>
