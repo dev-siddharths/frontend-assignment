@@ -4,7 +4,7 @@ import gitlab from "../assets/gitlab.png";
 import leadsquare from "../assets/leadsquare.png";
 import airbnb from "../assets/airbnb.png";
 import ab from "../assets/ab.png";
-import Reviews from "../components/Reviews";
+import Reviews from "./Reviews";
 
 const TechLeaders = () => {
   return (

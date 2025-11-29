@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Tagline from "../components/Tagline";
-import TechLeaders from "../pages/TechLeaders";
-import Browse from "../pages/Browse";
-import LeadershipSection from "../pages/LeadershipSection";
-import EasySteps from "../pages/EasySteps";
-import Footer from "../pages/Footer";
-import HireForm from "../pages/HireForm";
+import TechLeaders from "../components/TechLeaders";
+import Browse from "../components/Browse";
+import LeadershipSection from "../components/LeadershipSection";
+import EasySteps from "../components/EasySteps";
+import Footer from "../components/Footer";
+import HireForm from "../components/HireForm";
 
 const Homepage = () => {
   return (

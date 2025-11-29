@@ -7,15 +7,12 @@ const Dashboard = () => {
   const [leads, setLeads] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-
-  // Fetch data from MockAPI
+  const API_URL = import.meta.env.VITE_API_URL;
   useEffect(() => {
     async function fetchLeads() {
       try {
-        const response = await axios.get(
-          "https://692ae9357615a15ff24e1108.mockapi.io/leads"
-        );
-        setLeads(response.data); // save data to state
+        const response = await axios.get(API_URL);
+        setLeads(response.data);
       } catch (error) {
         console.log("Error fetching leads:", error);
       } finally {
@@ -27,31 +24,31 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#faf7e8] flex">
+    <div className="min-h-screen bg-[#faf7e8] flex flex-col md:flex-row">
       {/* Sidebar */}
-      <aside className="w-56 bg-[#faf7e8] border-r border-gray-200 p-6">
-        <img src={uplers} alt="logo" className="mb-8 w-24" />
-        <button
-          className="w-full cursor-pointer bg-yellow-200 py-2 rounded-lg font-medium m-2"
-          onClick={() => {
-            navigate("/dashboard");
-          }}
-        >
-          Dashboard
-        </button>
-        <button
-          className="w-full cursor-pointer text-white bg-black py-2 rounded-lg font-medium m-2"
-          onClick={() => {
-            navigate("/editdashboard");
-          }}
-        >
-          Edit
-        </button>
+      <aside className="w-full md:w-56 bg-[#faf7e8] border-b md:border-r md:border-b-0 border-gray-200 p-6 flex md:block items-center justify-between">
+        <img src={uplers} alt="logo" className="w-20 md:w-24 mb-5" />
+
+        <div className="flex md:flex-col gap-3">
+          <button
+            className="w-32 md:w-full cursor-pointer bg-yellow-200 py-2 rounded-lg font-medium"
+            onClick={() => navigate("/dashboard")}
+          >
+            Dashboard
+          </button>
+
+          <button
+            className="w-32 md:w-full cursor-pointer text-white bg-black py-2 rounded-lg font-medium"
+            onClick={() => navigate("/editdashboard")}
+          >
+            Edit
+          </button>
+        </div>
       </aside>
 
       {/* Main Area */}
-      <main className="flex-1 p-10">
-        <h1 className="text-2xl font-semibold mb-8">Submission</h1>
+      <main className="flex-1 p-5 md:p-10">
+        <h1 className="text-xl md:text-2xl font-semibold mb-6">Submission</h1>
 
         {loading ? (
           <p>Loading...</p>
@@ -62,46 +59,48 @@ const Dashboard = () => {
                 key={lead.id}
                 className="bg-yellow-100 p-4 rounded-xl shadow"
               >
-                <div className="grid grid-cols-2 gap-y-2 text-sm">
-                  <span className="font-semibold bg-white px-2 py-1 rounded">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 text-sm">
+                  <p className="font-semibold bg-white px-2 py-1 rounded">
                     Full Name
-                  </span>
-                  <span className="px-5">{lead.full_name}</span>
+                  </p>
+                  <p className="px-2 break-words min-w-0">{lead.full_name}</p>
 
-                  <span className="font-semibold bg-white px-2 py-1 rounded">
+                  <p className="font-semibold bg-white px-2 py-1 rounded">
                     Phone
-                  </span>
-                  <span className="px-5">{lead.phone}</span>
+                  </p>
+                  <p className="px-2 break-words min-w-0">{lead.phone}</p>
 
-                  <span className="font-semibold bg-white px-2 py-1 rounded">
+                  <p className="font-semibold bg-white px-2 py-1 rounded">
                     Email
-                  </span>
-                  <span className="px-5">{lead.email}</span>
+                  </p>
+                  <p className="px-2 break-words min-w-0">{lead.email}</p>
 
-                  <span className="font-semibold bg-white px-2 py-1 rounded">
+                  <p className="font-semibold bg-white px-2 py-1 rounded">
                     Additional Info
-                  </span>
-                  <span className="px-5">{lead.additional_info}</span>
+                  </p>
+                  <p className="px-2 break-words min-w-0">
+                    {lead.additional_info}
+                  </p>
 
-                  <span className="font-semibold bg-white px-2 py-1 rounded">
+                  <p className="font-semibold bg-white px-2 py-1 rounded">
                     Roles
-                  </span>
-                  <span className="px-5">{lead.roles}</span>
+                  </p>
+                  <p className="px-2 break-words min-w-0">{lead.roles}</p>
 
-                  <span className="font-semibold bg-white px-2 py-1 rounded">
+                  <p className="font-semibold bg-white px-2 py-1 rounded">
                     Budget
-                  </span>
-                  <span className="px-5">{lead.budget}</span>
+                  </p>
+                  <p className="px-2 break-words min-w-0">{lead.budget}</p>
 
-                  <span className="font-semibold bg-white px-2 py-1 rounded">
+                  <p className="font-semibold bg-white px-2 py-1 rounded">
                     Talents
-                  </span>
-                  <span className="px-5">{lead.talents}</span>
+                  </p>
+                  <p className="px-2 break-words min-w-0">{lead.talents}</p>
 
-                  <span className="font-semibold bg-white px-2 py-1 rounded">
+                  <p className="font-semibold bg-white px-2 py-1 rounded">
                     Persona
-                  </span>
-                  <span className="px-5">{lead.persona}</span>
+                  </p>
+                  <p className="px-2 break-words min-w-0">{lead.persona}</p>
                 </div>
               </div>
             ))}

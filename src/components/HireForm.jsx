@@ -11,23 +11,22 @@ const HireForm = () => {
   const [talents, settalents] = useState("");
   const [additionalinfo, setadditionalinfo] = useState("");
   const [persona, setpersona] = useState("");
+  const API_URL = import.meta.env.VITE_API_URL;
+
   async function handleSubmit(e) {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await axios.post(
-        "https://692ae9357615a15ff24e1108.mockapi.io/leads",
-        {
-          full_name: fullname,
-          phone: phonenumber,
-          roles: roles,
-          budget: budget,
-          email: email,
-          talents: talents,
-          additional_info: additionalinfo,
-          persona: persona,
-        }
-      );
+      const response = await axios.post(API_URL, {
+        full_name: fullname,
+        phone: phonenumber,
+        roles: roles,
+        budget: budget,
+        email: email,
+        talents: talents,
+        additional_info: additionalinfo,
+        persona: persona,
+      });
       alert("Form Submission Successfull");
       setfullname("");
       setphonenumber("");

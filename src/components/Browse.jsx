@@ -3,7 +3,7 @@ import sde from "../assets/sde.png";
 import mlE from "../assets/mlE.png";
 import devops from "../assets/devops.png";
 import dataE from "../assets/dataE.png";
-import Card from "../components/Card";
+import Card from "./Card";
 import sa from "../assets/sarchitect.png";
 
 const Browse = () => {
