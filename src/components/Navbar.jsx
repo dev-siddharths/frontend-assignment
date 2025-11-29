@@ -1,51 +1,81 @@
-import React from "react";
-import uplers from "../assets/uplers.png";
+import React, { useState } from "react";
+import uplers from "../assets/uplers1.png";
 import bgimg from "../assets/Vector 1.png";
-import rec from "../assets/REC.png";
+
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  const menuItems = [
+    "Page",
+    "For Companies",
+    "For Talent",
+    "Ai Recruitment",
+    "Blogs",
+    "Pricing",
+  ];
+
   return (
-    <div
-      className="flex items-center px-4 py-4 bg-cover bg-center"
+    <nav
+      className="w-full bg-cover bg-center px-6 py-4"
       style={{ backgroundImage: `url(${bgimg})` }}
     >
-      {/* Logo */}
-      <img src={uplers} alt="Logo" style={{ maxWidth: "7rem" }} />
+      <div className="flex items-center justify-between">
+        {/* Logo */}
+        <img src={uplers} alt="Logo" className="w-28" />
 
-      {/* Menu */}
-      <ul className="flex flex-1 justify-center items-center space-x-6">
-        <li className="p-2 cursor-pointer hover:text-yellow-100 font-medium">
-          Page
-        </li>
-        <li className="p-2 cursor-pointer hover:text-yellow-100 font-medium">
-          For Companies
-        </li>
-        <li className="p-2 cursor-pointer hover:text-yellow-100 font-medium">
-          For Talent
-        </li>
-        <li className="p-2 cursor-pointer hover:text-yellow-100 font-medium">
-          Ai Recruitment
-        </li>
-        <li className="p-2 cursor-pointer hover:text-yellow-100 font-medium">
-          Blogs
-        </li>
-        <li className="p-2 cursor-pointer hover:text-yellow-100 font-medium">
-          Pricing
-        </li>
-      </ul>
+        {/* Desktop Menu */}
+        <ul className="hidden lg:flex space-x-8 font-medium">
+          {menuItems.map((item) => (
+            <li
+              key={item}
+              className="cursor-pointer hover:text-red-500 transition"
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
 
-      {/* Buttons */}
-      <div
-        className="flex space-x-4"
-        style={{ backgroundImage: `url(${rec})` }}
-      >
-        <button className="bg-yellow-300 px-4 py-2 rounded-3xl hover:bg-yellow-400">
-          Hire Talent
-        </button>
-        <button className="bg-black text-white px-4 py-2 rounded-3xl hover:bg-gray-900">
-          Find a Job
+        {/* Desktop Buttons */}
+        <div className="hidden lg:flex space-x-4">
+          <button className="bg-yellow-300 px-4 py-2 rounded-3xl hover:bg-yellow-400">
+            Hire Talent
+          </button>
+          <button className="bg-black text-white px-4 py-2 rounded-3xl hover:bg-gray-900">
+            Find a Job
+          </button>
+        </div>
+
+        {/* Mobile Hamburger (visible BELOW lg) */}
+        <button className="lg:hidden text-3xl" onClick={() => setOpen(!open)}>
+          ☰
         </button>
       </div>
-    </div>
+
+      {/* Mobile Menu */}
+      {open && (
+        <div className="lg:hidden mt-4 space-y-4">
+          <ul className="space-y-3 font-medium">
+            {menuItems.map((item) => (
+              <li
+                key={item}
+                className="cursor-pointer hover:text-red-500 transition"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <div className="flex flex-col space-y-3 mt-3">
+            <button className="bg-yellow-300 px-4 py-2 rounded-3xl hover:bg-yellow-400">
+              Hire Talent
+            </button>
+            <button className="bg-black text-white px-4 py-2 rounded-3xl hover:bg-gray-900">
+              Find a Job
+            </button>
+          </div>
+        </div>
+      )}
+    </nav>
   );
 };
 
