@@ -30,8 +30,8 @@ const TechLeaders = () => {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row justify-center items-center justify-evenly">
-          <Reviews text1="3 Million+" text2="Talent Network" image="" />
-          <Reviews text1="1 Million+" text2="Followers Linked in" image="" />
+          <Reviews text1="3 Million+" text2="Talent Network" />
+          <Reviews text1="1 Million+" text2="Followers Linked in" />
           <Reviews text1="Clutch 126+" image={reviews} />
         </div>
       </div>
