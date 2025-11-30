@@ -1,21 +1,20 @@
 import React from "react";
 import rec from "../assets/REC.png";
+import Navbar from "./Navbar";
 
 const Tagline = () => {
   return (
     <div
-      className="flex flex-col justify-center   mb-8"
+      className="flex flex-col justify-center bg-[#FFFCF0] mb-8"
       style={{
         backgroundImage: `url(${rec})`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "right",
       }}
     >
+      <Navbar></Navbar>
       <div className="flex justify-center items-center">
-        <div
-          className=" w-max  rounded-2xl px-4 py-2"
-          style={{ backgroundColor: "whitesmoke", marginBottom: "5rem" }}
-        >
+        <div className=" w-max bg-[#0F0E0E14] rounded-2xl px-4 py-2 mb-20">
           <span>Find, hire & manage your offshore team seamlessly</span>
         </div>
       </div>

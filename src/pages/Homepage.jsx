@@ -11,7 +11,6 @@ import HireForm from "../components/HireForm";
 const Homepage = () => {
   return (
     <>
-      <Navbar></Navbar>
       <Tagline></Tagline>
       <TechLeaders />
       <Browse></Browse>

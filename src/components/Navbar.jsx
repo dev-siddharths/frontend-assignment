@@ -16,10 +16,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav
-      className="w-full bg-cover bg-center px-6 py-4"
-      style={{ backgroundImage: `url(${bgimg})` }}
-    >
+    <nav className="w-full bg-cover bg-center px-6 py-4">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <img src={uplers} alt="Logo" className="w-28" />
