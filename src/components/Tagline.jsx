@@ -14,7 +14,7 @@ const Tagline = () => {
     >
       <Navbar></Navbar>
       <div className="flex justify-center items-center">
-        <div className=" w-max bg-[#0F0E0E14] rounded-2xl px-4 py-2 mb-20">
+        <div className=" w-max shadow-2xl rounded-2xl px-4 py-2 mb-20">
           <span>Find, hire & manage your offshore team seamlessly</span>
         </div>
       </div>
@@ -62,10 +62,16 @@ const Tagline = () => {
           </div>
 
           {/* Buttons */}
-          <button className="w-full cursor-pointer sm:w-auto px-4 py-2 rounded-full bg-yellow-400 text-sm font-semibold">
+          <button
+            className="w-full cursor-pointer sm:w-auto px-4 py-2  bg-yellow-400 text-sm font-semibold"
+            style={{ borderRadius: "0.5rem" }}
+          >
             Find a Job
           </button>
-          <button className="w-full cursor-pointer sm:w-auto px-4 py-2 rounded-full bg-black text-white text-sm font-semibold">
+          <button
+            className="w-full cursor-pointer sm:w-auto px-4 py-2  bg-black text-white text-sm font-semibold"
+            style={{ borderRadius: "0.5rem" }}
+          >
             Drop Resume
           </button>
         </div>

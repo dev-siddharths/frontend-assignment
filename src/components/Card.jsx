@@ -6,7 +6,7 @@ const Card = (props) => {
     <>
       <div
         className="flex flex-col rounded-2xl justify-center items-center px-5 py-3 mx-6 w-40"
-        style={{ backgroundColor: `${props.color}` }}
+        style={{ backgroundColor: `${props.color}`, border: "1px solid black" }}
       >
         <img src={props.image} alt="" className="w-16" />
         <small className="font-semibold text-center">{props.title}</small>
