@@ -75,21 +75,21 @@ const Footer = () => {
           {/* Social badge row */}
           <div className="flex flex-wrap justify-center gap-4 mt-4 md:mt-0">
             {/* LinkedIn followers */}
-            <div className="flex items-center gap-2 border rounded-full px-4 py-2 bg-white">
+            <div className="flex items-center gap-2 border rounded-full px-4 py-2 bg-blend-color">
               <img src={linkedin} className="w-10" />
               <span className="font-semibold">1M+</span>
               <span className="text-gray-600">Followers</span>
             </div>
 
             {/* Clutch */}
-            <div className="flex items-center gap-2 border rounded-full px-4 py-2 bg-white">
+            <div className="flex items-center gap-2 border rounded-full px-4 py-2 bg-blend-color">
               <img src={clutch} className="w-10" />
               <span>4.9 ⭐</span>
               <span className="text-gray-600">126 reviews</span>
             </div>
 
             {/* Google */}
-            <div className="flex items-center gap-2 border rounded-full px-4 py-2 bg-white">
+            <div className="flex items-center gap-2 border rounded-full px-4 py-2 bg-blend-color">
               <img src={google} className="w-10" />
               <span>4.1 ⭐</span>
               <span className="text-gray-600">396 reviews</span>

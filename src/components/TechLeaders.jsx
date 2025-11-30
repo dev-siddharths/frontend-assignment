@@ -4,6 +4,7 @@ import gitlab from "../assets/gitlab.png";
 import leadsquare from "../assets/leadsquare.png";
 import airbnb from "../assets/airbnb.png";
 import ab from "../assets/ab.png";
+import reviews from "../assets/reviews.png";
 import Reviews from "./Reviews";
 
 const TechLeaders = () => {
@@ -21,22 +22,17 @@ const TechLeaders = () => {
           </span>
           {/* Tech Leader  */}
           <div className="flex flex-col flex-1 lg:flex-row  items-center justify-evenly">
-            <img
-              src={hr}
-              alt=""
-              style={{ width: "132px", height: "32" }}
-              className="m-3"
-            />
-            <img src={gitlab} alt="" className="m-3 lg:m-0" />
-            <img src={leadsquare} alt="" className="m-3 lg:m-0" />
-            <img src={ab} alt="" className="m-3 lg:m-0" />
+            <img src={hr} alt="" className="m-3 lg:m-0" />
             <img src={airbnb} alt="" className="m-3 lg:m-0" />
+            <img src={gitlab} alt="" className="m-3 lg:m-0" />
+            <img src={ab} alt="" className="m-3 lg:m-0" />
+            <img src={leadsquare} alt="" className="m-3 lg:m-0" />
           </div>
         </div>
         <div className="flex flex-col lg:flex-row justify-center items-center justify-evenly">
-          <Reviews text1="3 Million+" text2="Talent Network" />
-          <Reviews text1="1 Million+" text2="Followers Linked in" />
-          <Reviews text1="Clutch 126+" text2="reviews" />
+          <Reviews text1="3 Million+" text2="Talent Network" image="" />
+          <Reviews text1="1 Million+" text2="Followers Linked in" image="" />
+          <Reviews text1="Clutch 126+" image={reviews} />
         </div>
       </div>
     </>

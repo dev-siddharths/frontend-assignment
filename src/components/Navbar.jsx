@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import uplers from "../assets/uplers1.png";
 import bgimg from "../assets/Vector 1.png";
+import rec from "../assets/REC.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);

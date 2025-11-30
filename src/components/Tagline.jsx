@@ -1,11 +1,15 @@
 import React from "react";
-import bgimg from "../assets/Vector 1.png";
+import rec from "../assets/REC.png";
 
 const Tagline = () => {
   return (
     <div
       className="flex flex-col justify-center   mb-8"
-      style={{ backgroundImage: `url(${bgimg})` }}
+      style={{
+        backgroundImage: `url(${rec})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "right",
+      }}
     >
       <div className="flex justify-center items-center">
         <div
